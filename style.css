@@ -58,6 +58,14 @@ nav ul li a:hover
   transition: .2sec;
 }
 
+#modeContainner{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+
 .nameLogo 
 {
   color: white;
@@ -102,7 +110,7 @@ nav ul li a:hover
   align-items: center;
 }
 
-.mainName
+#mainName
 {
   color: #577ab2;
   font-family: monospace;
@@ -111,6 +119,31 @@ nav ul li a:hover
   text-shadow: 2px 2px 10px #ccc;
   margin-bottom: 20px;
 }
+
+#lightBtn{
+
+  border-radius: 10%;
+  background-color: transparent;
+  border: 2px solid rgb(255, 255, 255); 
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+  padding: 1px 5px;
+  font-family: monospace;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  font-size: small; 
+  font-family: monospace;
+ 
+}
+
+#lightBtn:hover{
+  background-color: white;
+  color: #577ab2;
+  cursor: pointer;
+}
+
+
+
 
 .info
 {
@@ -132,7 +165,7 @@ nav ul li a:hover
   margin-top: 20px;
 }
 
-.resumeBtn
+#resumeBtn
 {
   background-color: transparent;
   border: 2px solid white;
@@ -144,10 +177,10 @@ nav ul li a:hover
   transition: all 0.2s ease-in-out;
 }
 
-.resumeBtn:hover
+#resumeBtn:hover
 {
-  background-color: white;
-  color: #577ab2;
+  background-color: #577ab2;
+  /* color: #577ab2; */
   cursor: pointer;
 }
 
@@ -253,7 +286,12 @@ iframe
   box-shadow: 0 0 10px #333;
   transition: all 0.3s;
 }
-
+.fa-solid.fa-traffic-light{
+  padding: 10%;
+  color: #577ab2;
+  
+  text-shadow: 2px 2px 10px #ccc; 
+}
 .fa-envelope:hover
 {
   transform: translateY(-5px);
