@@ -66,7 +66,7 @@ lightBtn.addEventListener('click', lightAndDarkFeature);
 
 
 const typeWriter = (elem, text) => {
-    const speed = 300;
+    const speed = 200;
     let i = 0;
     
     const addLetter = () => {
@@ -74,11 +74,18 @@ const typeWriter = (elem, text) => {
         elem.innerHTML += text.charAt(i);
         i++;
         setTimeout(addLetter, speed);
+        
+        } 
+        else if (i === text.length) {
+            setTimeout(() => {
+                elem.innerHTML = "";
+                i = 0;
+                typeWriter(elem, text);
+            }, 2000);
+
       } else {
         i = 0;
         elem.innerHTML = "";
-        
-
 
         setTimeout(() => {
           typeWriter(elem, text);
@@ -87,6 +94,7 @@ const typeWriter = (elem, text) => {
     }
     
     addLetter();
+    
   }
   
   const introName = "Hello, I'm OJ";
